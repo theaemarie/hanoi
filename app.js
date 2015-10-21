@@ -1,16 +1,13 @@
 var hanoi = [
-  [10, 20, 30, 40, 50],
+  [5,4,3,2,1],
   [],
   []
 ];
 
 function move (source, target) {
-  var value = hanoi[source].shift();
-  console.log(target.slice(), source.slice())
-  if (value != null && target[0] < value) {
-    throw new RangeError;
-  }
-  hanoi[target].unshift(value);
+  var value = hanoi[source].pop();
+  hanoi[target].push(value);
 }
 
 
+document.getElementById('tower').innerHTML = hanoi;
