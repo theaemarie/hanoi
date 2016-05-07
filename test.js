@@ -14,18 +14,12 @@ QUnit.test('Ensure the Hanoi PILE is an Array', function (assert) {
   })
 });
 
-QUnit.test('The length of the first pile is 5', function (assert) {
-  assert.strictEqual(hanoi[0].length, 5);
-});
 
-QUnit.test('The length of the second pile is 0', function(assert) {
-  assert.strictEqual(hanoi[1].length, 0);
-});
-
-QUnit.test('A piece is removed from source, target gets new piece', function (assert) {
-  move(0, 1);
-
-  assert.strictEqual(hanoi[0].length, 4);
-  assert.strictEqual(hanoi[1].length, 1);
+QUnit.test('Ensure no piece in each pile is underneath a bigger piece', function (assert) {
+  hanoi.forEach(function (pile) {
+    for (i=0; i< pile.length; i++){
+      assert.strictEqual(pile[i] < pile[i+1], false)
+    }
+  });
 });
 

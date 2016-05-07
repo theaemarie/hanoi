@@ -10,4 +10,11 @@ function move (source, target) {
 }
 
 
-document.getElementById('tower').innerHTML = hanoi;
+//document.getElementById('pile1').innerHTML = hanoi[0];
+
+// if (hanoi[1] !== null) {
+//   document.getElementById('pile2').innerHTML = hanoi[1];
+// }
+// if (hanoi[2] !== null) {
+//   document.getElementById('pile2').innerHTML = hanoi[2];
+// }
