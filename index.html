@@ -4,12 +4,22 @@
   <meta charset="UTF-8">
   <title>Coding Dojo</title>
   <link rel="stylesheet" href="qunit.css">
+  <script   src="jquery.min.js"></script>
   <script src="qunit.js"></script>
-
   <script src="app.js"></script>
   <script src="test.js"></script>
 </head>
 <body>
+	<h1>Tower of Hanoi</h1>
+	<div style="height:100px">
+		<div id="pile_1">hi</div>
+		<div id="pile_2"></div>
+		<div id="pile_3"></div>
+		<label>Source<input value="0" type="number" id="source" min="0" max="2"></label>
+		<label>Target<input value="0" type="number" id="target" min="0" max="2"></label>
+		<button id="move">Move</button>
+	</div>
+
 	<div id="qunit"></div>
 </body>
 </html>
