@@ -22,9 +22,20 @@ var move = function (tower, source, target) {
 }
 
 function setTowers () {
-  $('#pile_1').html(hanoi[0]);
-  $('#pile_2').html(hanoi[1]);
-  $('#pile_3').html(hanoi[2]);
+  $('#pile_1').html('');
+  $('#pile_2').html('');
+  $('#pile_3').html('');
+
+  $('#pile_1').html(buildPiles(0));
+  $('#pile_2').html(buildPiles(1));
+  $('#pile_3').html(buildPiles(2));
+}
+
+var buildPiles = function (pile_index) {
+  $.each(hanoi[pile_index], function(index, value){
+      var pileNum = pile_index + 1;
+      $('#pile_' + pileNum).prepend('<div class="pile p_' + value + '">' + value +'</div>');
+    });
 }
 
 $(document).ready(function(){

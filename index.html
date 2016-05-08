@@ -8,17 +8,48 @@
   <script src="qunit.js"></script>
   <script src="app.js"></script>
   <script src="test.js"></script>
+  <style>
+    .tower {
+      display: table;
+      border: 10px solid coral;
+      box-sizing: border-box;
+      min-height: 120px;
+      width: 100%;
+    }
+    .piles {
+      display: table-cell;
+      vertical-align: bottom;
+      width: 33%;
+    }
+    .pile {
+      background: turquoise;
+      margin: auto;
+      text-align: center;
+    }
+    .p_1 {
+      width: 20%;
+    }
+    .p_2 {
+      width: 40%;
+    }
+    .p_3 {
+      width: 60%;
+    }
+    .p_4 {
+      width: 80%;
+    }
+  </style>
 </head>
 <body>
 	<h1>Tower of Hanoi</h1>
-	<div style="height:100px">
-		<div id="pile_1">hi</div>
-		<div id="pile_2"></div>
-		<div id="pile_3"></div>
-		<label>Source<input value="0" type="number" id="source" min="0" max="2"></label>
-		<label>Target<input value="0" type="number" id="target" min="0" max="2"></label>
-		<button id="move">Move</button>
-	</div>
+  <div class="tower">
+		<div id="pile_1" class="piles"></div>
+		<div id="pile_2" class="piles"></div>
+		<div id="pile_3" class="piles"></div>
+  </div>
+	<label>Source<input value="0" type="number" id="source" min="0" max="2"></label>
+	<label>Target<input value="0" type="number" id="target" min="0" max="2"></label>
+	<button id="move">Move</button>
 
 	<div id="qunit"></div>
 </body>
